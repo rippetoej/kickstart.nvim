@@ -201,6 +201,11 @@ vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = '[T]oggle [T]r
 vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>', { desc = '[T]ree [F]ocus' })
 vim.keymap.set('n', '<leader>b', ':NvimTreeFindFile<CR>', { desc = 'Highlight current [B]uffer' })
 
+vim.keymap.set({ 'n', 'x' }, '<leader>yss', '"+y$', { desc = '[Y]ank [S]election to [S]ystem clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>yls', '"+y$', { desc = '[Y]ank [L]ine to [S]ystem clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>yGs', '"+y$', { desc = '[Y]ank to Last Line to [S]ystem clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = '[P]aste from [S]ystem clipboad' })
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
