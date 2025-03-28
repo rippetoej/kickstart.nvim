@@ -201,10 +201,10 @@ vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = '[T]oggle [T]r
 vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>', { desc = '[T]ree [F]ocus' })
 vim.keymap.set('n', '<leader>b', ':NvimTreeFindFile<CR>', { desc = 'Highlight current [B]uffer' })
 
-vim.keymap.set({ 'n', 'x' }, '<leader>yss', '"+y$', { desc = '[Y]ank [S]election to [S]ystem clipboad' })
-vim.keymap.set({ 'n', 'x' }, '<leader>yls', '"+y$', { desc = '[Y]ank [L]ine to [S]ystem clipboad' })
-vim.keymap.set({ 'n', 'x' }, '<leader>yGs', '"+y$', { desc = '[Y]ank to Last Line to [S]ystem clipboad' })
-vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = '[P]aste from [S]ystem clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>ys', '"+y', { desc = '[Y]ank [S]election to system clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>yl', '"+yy', { desc = '[Y]ank [L]ine to system clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>yf', ':%y+<CR>', { desc = '[Y]ank [F]ile to system clipboad' })
+vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = '[P]aste from system clipboad' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -335,6 +335,7 @@ require('lazy').setup({
         { '<leader>s', group = '[S]earch' },
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
+        { '<leader>y', group = '[Y]ank' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
