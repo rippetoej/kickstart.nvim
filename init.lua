@@ -941,7 +941,13 @@ require('lazy').setup({
       'nvim-tree/nvim-web-devicons',
     },
     config = function()
-      require('nvim-tree').setup {}
+      require('nvim-tree').setup {
+        filters = {
+          dotfiles = false,
+          git_clean = false,
+          custom = { 'GTAGS', 'GRTAGS', 'GPATH', '*.sublime-project', '*.sublime-workspace' },
+        },
+      }
     end,
   },
   {
