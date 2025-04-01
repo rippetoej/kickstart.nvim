@@ -209,7 +209,7 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- Keybindings related to the `nvim-tree` plugin
 vim.keymap.set('n', '<leader>tt', ':NvimTreeToggle<CR>', { desc = '[T]oggle [T]ree' })
 vim.keymap.set('n', '<leader>tf', ':NvimTreeFocus<CR>', { desc = '[T]ree [F]ocus' })
-vim.keymap.set('n', '<leader>b', ':NvimTreeFindFile<CR>', { desc = 'Highlight current [B]uffer' })
+vim.keymap.set('n', '<leader>tb', ':NvimTreeFindFile<CR>', { desc = 'Highlight current [B]uffer' })
 
 vim.keymap.set({ 'n', 'x' }, '<leader>ys', '"+y', { desc = '[Y]ank [S]election to system clipboad' })
 vim.keymap.set({ 'n', 'x' }, '<leader>yl', '"+yy', { desc = '[Y]ank [L]ine to system clipboad' })
