@@ -1009,7 +1009,7 @@ require('lazy').setup({
         -- cscope executable
         exec = 'gtags-cscope', -- "cscope" or "gtags-cscope"
         -- choose your fav picker
-        picker = 'snacks', -- "quickfix", "telescope", "fzf-lua", "mini-pick" or "snacks"
+        picker = 'telescope', -- "quickfix", "telescope", "fzf-lua", "mini-pick" or "snacks"
         -- size of quickfix window
         qf_window_size = 5, -- any positive integer
         -- position of quickfix window
