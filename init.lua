@@ -163,6 +163,16 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Treesitter config
+vim.wo.foldmethod = 'expr'
+vim.wo.foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+vim.opt.foldcolumn = '0'
+vim.opt.foldtext = ''
+vim.opt.fillchars = 'fold: '
+vim.opt.foldlevel = 99
+-- vim.opt.foldlevelstart = 1
+-- vim.opt.foldnestmax = 4
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -205,6 +215,8 @@ vim.keymap.set({ 'n', 'x' }, '<leader>ys', '"+y', { desc = '[Y]ank [S]election t
 vim.keymap.set({ 'n', 'x' }, '<leader>yl', '"+yy', { desc = '[Y]ank [L]ine to system clipboad' })
 vim.keymap.set({ 'n', 'x' }, '<leader>yf', ':%y+<CR>', { desc = '[Y]ank [F]ile to system clipboad' })
 vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = '[P]aste from system clipboad' })
+
+vim.keymap.set({ 'n', 'x' }, '<leader>;', 'z', { desc = 'Folding' })
 
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
@@ -336,6 +348,7 @@ require('lazy').setup({
         { '<leader>w', group = '[W]orkspace' },
         { '<leader>t', group = '[T]oggle' },
         { '<leader>y', group = '[Y]ank' },
+        { '<leader>;', group = 'Folding' },
         { '<leader>h', group = 'Git [H]unk', mode = { 'n', 'v' } },
       },
     },
