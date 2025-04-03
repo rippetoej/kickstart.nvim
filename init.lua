@@ -218,6 +218,13 @@ vim.keymap.set({ 'n', 'x' }, '<leader>p', '"+p', { desc = '[P]aste from system c
 
 vim.keymap.set({ 'n', 'x' }, '<leader>;', 'z', { desc = 'Folding' })
 
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'TelescopePreviewerLoaded',
+  callback = function()
+    vim.wo.wrap = true
+  end,
+})
+
 -- [[ Basic Autocommands ]]
 --  See `:help lua-guide-autocommands`
 
@@ -412,6 +419,7 @@ require('lazy').setup({
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
+          -- wrap_results = true,
           mappings = {
             i = {
               -- ['<c-enter>'] = 'to_fuzzy_refine' },
